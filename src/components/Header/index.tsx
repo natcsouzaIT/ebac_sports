@@ -1,5 +1,5 @@
 import React from 'react'
-import { Produto } from '../../App' // ou do arquivo onde você definiu Produto
+import { Produto } from '../../types'
 
 type HeaderProps = {
   favoritos: Produto[]

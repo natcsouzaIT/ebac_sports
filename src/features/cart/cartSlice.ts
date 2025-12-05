@@ -17,7 +17,7 @@ const cartSlice = createSlice({
       state.items.push(action.payload)
     },
     removeItem: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter(item => item.id !== action.payload)
+      state.items = state.items.filter((item) => item.id !== action.payload)
     },
     clearCart: (state) => {
       state.items = []

@@ -4,10 +4,15 @@ import { useDispatch } from 'react-redux'
 import { addItem } from '../../features/cart/cartSlice'
 
 export const paraReal = (valor: number) =>
-  new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor)
+  new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
+    valor
+  )
 
 type Props = {
   produto: Produto
+  estaNosFavoritos: boolean
+  favoritar: (produto: Produto) => void
+  aoComprar: (produto: Produto) => void
 }
 
 const ProdutoComponent = ({ produto }: Props) => {
