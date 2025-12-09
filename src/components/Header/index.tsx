@@ -1,19 +1,25 @@
 import React from 'react'
 import { Produto } from '../../types'
+import { Header } from './styles'
 
 type HeaderProps = {
   favoritos: Produto[]
   itensNoCarrinho: Produto[]
 }
 
-const Header: React.FC<HeaderProps> = ({ favoritos, itensNoCarrinho }) => {
+const HeaderComponent: React.FC<HeaderProps> = ({
+  favoritos,
+  itensNoCarrinho
+}) => {
   return (
-    <header>
+    <Header>
       <h1>EBAC Sports</h1>
-      <p>Favoritos: {favoritos.length}</p>
-      <p>Carrinho: {itensNoCarrinho.length}</p>
-    </header>
+      <div>
+        <p>Favoritos: {favoritos.length}</p>
+        <p>Carrinho: {itensNoCarrinho.length}</p>
+      </div>
+    </Header>
   )
 }
 
-export default Header
+export default HeaderComponent

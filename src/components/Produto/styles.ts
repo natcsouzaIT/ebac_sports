@@ -86,3 +86,14 @@ export const BtnComprar = styled.button`
     );
   }
 `
+export const BtnFavorito = styled.button`
+  font-weight: bold;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+`
